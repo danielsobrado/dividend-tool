@@ -1,0 +1,56 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.0.5'
+	id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.jds.dividend.dividendtool'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+	jcenter()
+	maven {
+		url 'https://repository.apache.org/content/repositories/releases/'
+	}
+	maven {
+		url 'https://oss.sonatype.org/content/repositories/snapshots'
+	}
+	maven {
+		url 'https://oss.sonatype.org/service/local/staging/deploy/maven2/'
+	}
+}
+
+dependencies {
+	implementation 'mysql:mysql-connector-java:8.0.32'
+	implementation 'org.projectlombok:lombok:1.18.24'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'io.vavr:vavr:0.10.4'
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springdoc:springdoc-openapi-ui:1.6.3'
+	implementation 'javax.servlet:javax.servlet-api:3.1.0'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.jsoup:jsoup:1.14.3'
+	implementation 'com.github.vladimir-bukhtoyarov:bucket4j-core:7.6.0'
+	implementation 'com.giffing.bucket4j.spring.boot.starter:bucket4j-spring-boot-starter:0.8.1'
+	implementation 'commons-io:commons-io:2.11.0'
+	implementation 'jakarta.persistence:jakarta.persistence-api:3.0.0'
+	implementation 'org.postgresql:postgresql:42.3.1'
+
+	annotationProcessor 'org.projectlombok:lombok:1.18.24'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testAnnotationProcessor "org.projectlombok:lombok:1.18.24"
+}
+
+test {
+	useJUnitPlatform()
+}

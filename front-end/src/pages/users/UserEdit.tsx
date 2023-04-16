@@ -4,7 +4,6 @@ import {
   Edit,
   SimpleForm,
   TextInput,
-  EmailInput,
   PasswordInput,
   DateInput,
 } from 'react-admin';
@@ -14,7 +13,7 @@ export const UserEdit: React.FC = (props) => (
     <SimpleForm>
       <TextInput disabled source="id" />
       <TextInput source="username" />
-      <EmailInput source="email" />
+      <TextInput source="email" type="email" />
       <PasswordInput source="password" />
       <DateInput source="created_at" />
       <DateInput source="updated_at" />

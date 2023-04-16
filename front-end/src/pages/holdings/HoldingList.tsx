@@ -18,8 +18,8 @@ export const HoldingList: React.FC = (props) => (
       <NumberField source="quantity" options={{ minimumFractionDigits: 2 }} />
       <NumberField source="averageCost" options={{ minimumFractionDigits: 2 }} />
       <DateField source="purchaseDate" />
-      <EditButton basePath="/holdings" />
-      <DeleteButton basePath="/holdings" />
+      <EditButton resource="/holdings" />
+      <DeleteButton resource="/holdings" />
     </Datagrid>
   </List>
 );

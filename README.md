@@ -71,3 +71,18 @@ The application should now be running on `http://localhost:8080`.
 ## Usage
 
 Once the application is running, you can interact with the REST API to create, read, update, and delete users, portfolios, holdings, and buy/sell operations. The dividend data scraping service will automatically collect dividend data from the Nasdaq website for the stocks in users' portfolios.
+
+### Running the Application
+
+To run the entire stack (backend, frontend, and PostgreSQL), use Docker Compose.
+
+Run the Docker Compose command to build and start the containers.
+```
+docker-compose up
+```
+
+#### Prerequisites
+
+- Docker
+- Docker Compose
+

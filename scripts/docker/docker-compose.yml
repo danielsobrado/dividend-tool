@@ -1,0 +1,35 @@
+version: '3.9'
+
+services:
+  backend:
+    build: ./backend
+    container_name: dividend-tracker-backend
+    ports:
+      - '8080:8080'
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/dividend_tracker
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend
+    container_name: dividend-tracker-frontend
+    ports:
+      - '3000:80'
+    depends_on:
+      - backend
+
+  db:
+    image: 'postgres:13'
+    container_name: dividend-tracker-postgres
+    environment:
+      - POSTGRES_DB=dividend_tracker
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - 'db-data:/var/lib/postgresql/data'
+
+volumes:
+  db-data:

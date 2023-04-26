@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   backend:
-    build: ./backend
+    build: ./back-end
     container_name: dividend-tracker-backend
     ports:
       - '8080:8080'
@@ -14,7 +14,7 @@ services:
       - db
 
   frontend:
-    build: ./frontend
+    build: ./front-end
     container_name: dividend-tracker-frontend
     ports:
       - '3000:80'

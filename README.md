@@ -88,6 +88,12 @@ For Windows:
 cd C:\path\to\your\project
 ```
 
+Generate the back-end jar:
+
+```
+gradle -p back-end clean build
+```
+
 Run the Docker Compose command to build and start the containers, specifying the `docker-compose.yml` file location:
 
 For Linux/macOS:

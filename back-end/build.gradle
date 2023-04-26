@@ -51,6 +51,12 @@ dependencies {
 	testAnnotationProcessor "org.projectlombok:lombok:1.18.24"
 }
 
+jar {
+    archiveBaseName = 'dividend-tracker-backend'
+    archiveVersion =  '0.0.1-SNAPSHOT'
+	destinationDirectory = file('./target')
+}
+
 test {
 	useJUnitPlatform()
 }

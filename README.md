@@ -76,17 +76,7 @@ Once the application is running, you can interact with the REST API to create, r
 
 To run the entire stack (backend, frontend, and PostgreSQL), use Docker Compose.
 
-Navigate to the root directory of your project, which contains the `scripts` folder:
-
-For Linux/macOS:
-```
-cd /path/to/your/project
-```
-
-For Windows:
-```
-cd C:\path\to\your\project
-```
+Navigate to the root directory of your project.
 
 Generate the back-end jar:
 
@@ -98,12 +88,12 @@ Run the Docker Compose command to build and start the containers, specifying the
 
 For Linux/macOS:
 ```
-docker-compose -f scripts/docker/docker-compose.yml up --build
+docker-compose up --build
 ```
 
 For Windows:
 ```
-docker-compose -f scripts\docker\docker-compose.yml up --build
+docker-compose up --build
 ```
 
 
